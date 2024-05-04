@@ -3,13 +3,10 @@
 
 <audio controls>
   <source src="audio_ai_voices/Ask_Sage_Intro.mp3" type="audio/mpeg">
-
 If you can't see the audio player, you can download the audio file [here](audio_ai_voices/Ask_Sage_Intro.mp3) and play it with your favorite audio player to get an intro of this repository. 
-
 </audio>
 
- <center> <img src="images/AskSage_Logo.png" alt="AskSage Logo" height="100" width="100"> </center>
-
+ <center> <img src="images/AskSage_Logo.png" alt="AskSage Logo" height="200" width="200"> </center>
 
 Welcome to the AskSage Overview repository! 🎉
 
@@ -27,9 +24,7 @@ If you are interested in contributing to this repository, please see the [Contri
 
 If you have any questions or need help, feel free to reach out to the maintainers of this repository or the AskSage team directly.
 
-
 <span style="color:yellow;font-size:smaller;font-style:italic">Note: the content in this repository may be outdated or incorrect, so please refer to the official AskSage documentation for the most up-to-date information.</span>
-
 
 # Table of Contents 
 - [ AskSage Overview - Open Source Community ](#-asksage-overview---open-source-community-)
@@ -305,7 +300,7 @@ After installing packages from `requirements.txt`, you may need to restart your 
 
 This is not really an example but more of a discussion on the ethical implications of using AI and how to mitigate any potential risks. We place a strong emphasis that a user needs to be well trained on how AI works, but also provide a clear understanding that what is generated through GenAI tools may not always be correct. 
 
-To go to this section click [AI Ethics](examples/ex_0_ai_ethics)
+To go to this section click [AI Ethics](examples/ex_0_ai_ethics/AI-Ethics.md)
 
 <p align="center">
 <img src="images/AI_Ethics.png" width="700" alt="GenAI Process">
@@ -317,7 +312,9 @@ To go to this section click [AI Ethics](examples/ex_0_ai_ethics)
 
 This example will cover how to use the AskSage API endpoints and what to expect in the responses at a high level. The follow on examples will show how the endpoints can be used in a real-world scenarios to create useful applications, tools, or services. 
 
-To go to this section click [API Endpoints](examples/ex_1_api_endpoints)
+- To go to this section click [API Endpoints](examples/ex_1_api_endpoints/AskSage_API_Endpoints.md)
+- Skip to the jupyter notebook example [here](examples/ex_1_api_endpoints/asksage_api_overview.ipynb)
+
 
 <p align="center">
 <img src="images/api_interface.png" width="400" alt="API Interface Process">
@@ -329,7 +326,14 @@ To go to this section click [API Endpoints](examples/ex_1_api_endpoints)
 
 This example will cover how to interact with a LLM model and how to use prompt engineering to generate high-quality text to be used to guide the model in generating the desired output. Prompt engineering is a powerful and necessary skill that can be used to control the output of a language model and generate text that meets specific criteria or requirements. 
 
-To go to this section click [Prompt Engineering](examples/ex_2_prompt_engineering)
+- To go to this section click [Prompt Engineering](examples/ex_2_prompt_engineering/Prompt_Engineering.md)
+- Example A: [Basic Overview of Prompt Engineering](examples/ex_2_prompt_engineering/Basic_Prompt_Engineering.ipynb)
+- Example B: [Prompt Engineering For Code Generation](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Code_Generation.ipynb)
+- Example C: [Prompt Engineering For Grant Writing](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Grant_Writing.ipynb)
+- Example D: [Prompt Engineering For Writing A Speech](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Writing_A_Speech.ipynb)
+- Example E: [Prompt Engineering For Recipe Generation](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Recipe_Generation.ipynb)
+- Example F: [Prompt Engineering For Project Management](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Project_Management.ipynb)
+- Example G: [Prompt Engineering - Detailed Explanation On Underlying Concepts and Techniques](examples/ex_2_prompt_engineering/Prompt_Engineering_Detailed_Explanation.ipynb)
 
 <p align="center">
 <img src="images/prompt_engineering.png" width="400" alt="Prompt Engineering Process">
@@ -341,12 +345,12 @@ To go to this section click [Prompt Engineering](examples/ex_2_prompt_engineerin
 
 For the most part, LLM models are trained on large datasets that contain a wide range of text from various sources and are not guaranteed to be relevant to the user's specific needs. However, on Ask Sage, users can create custom datasets that contain text that is relevant to their domain or use case and use it with methods like Retrieval-Augmented Generation (RAG) to improve the performance of the model. Thus, this example will cover how to create a custom dataset and use it with a LLM model to generate text that is more relevant to the user's needs. More detailed information will be provided within the example on how the model works/integrates with the dataset.
 
-To go to this section click [LLM Dataset](examples/ex_3_llm_dataset)
+- To go to this section click [LLM Dataset](examples/ex_3_llm_dataset/LLM_Dataset.md)
+- Example A: [Basic Overview of Building a LLM Dataset](examples/ex_3_llm_dataset/Creating_A_Custom_Dataset.ipynb)
 
 <p align="center">
 <img src="images/llm_dataset.png" width="300" alt="LLM Dataset Process">
 </p>
-
 
 #### 4. Comparing LLM Models
 
@@ -354,7 +358,7 @@ To go to this section click [LLM Dataset](examples/ex_3_llm_dataset)
 
 The number of LLM models available in today is vast and will continue to grow as more research is done in the field of generative AI. This example will cover how to compare different LLM models using Ask Sage agnostic API method, and evaluate their performance based on various criteria such as text quality, coherence, creativity, and more. Users can use this information to select the best model for their needs and make informed decisions about which model to use in their projects.
 
-To go to this section click [Comparing LLM Models](examples/ex_4_comparing_llm_models)
+To go to this section click [Comparing LLM Models](examples/ex_4_comparing_llm_models/Comparing_LLM_Models.md)
 
 <p align="center">
 <img src="images/comparing_llm_models.png" width="400" alt="LLM Comparison Process">
@@ -366,7 +370,7 @@ To go to this section click [Comparing LLM Models](examples/ex_4_comparing_llm_m
 
 This is a unique project and will probably be outdated in the future but, LLMs are text-based models that generate text based on the input provided by the user, but what if we wanted to generate a diagram without having to manually create it? For example let's say we wanted a flowchart, mind map, Gantt chart, or any other type of diagram. This example will cover how we use mermaid.js a text-based diagram creation tool to generate diagrams based on the text generated by the LLM model. 
 
-To go to this section click [Diagram Creation With LLMs](examples/ex_5_diagram_creation_with_llms)
+To go to this section click [Diagram Creation With LLMs](examples/ex_5_diagram_creation_with_llms/Diagram_Creation_With_LLMs.md)
 
 <p align="center">
 <img src="images/gannt_chart.png" width="400" alt="gannt chart Process">
@@ -390,7 +394,7 @@ To go to this section click [Diagram Creation With LLMs](examples/ex_5_diagram_c
 
 What about being able to deploy a LLM model on a edge device like a Raspberry Pi or Jetson Nano? This example will cover how to deploy a LLM model on a edge device and generate text utilizing the Asksage API. 
 
-To go to this section click [LLM Deployment On A Edge Device](examples/ex_6_llm_deployment_edge_device)
+To go to this section click [LLM Deployment On A Edge Device](examples/ex_6_llm_deployment_edge_device/LLM_Deployment_On_A_Edge_Device.md)
 
 <p align="center">
 <img src="images/edge_device.png" width="400" alt="Edge Device Process">
@@ -402,7 +406,15 @@ To go to this section click [LLM Deployment On A Edge Device](examples/ex_6_llm_
 
 How do we evaluate the performance of a LLM model and monitor its progress over time? This example will cover how to create a dashboard that displays key metrics and insights about the LLM model. Users can use this dashboard to track the performance of the model and make informed decisions about how to improve it over time.
 
-To go to this section click [LLM Evaluation and Monitoring Dashboard](examples/ex_7_llm_evaluation_monitoring_dashboard)
+But first, we will use @arize-ai phoenix open source tool to create a dashboard that displays key metrics and insights about the LLM model.
+
+- To go to this section click [LLM Evaluation and Monitoring Dashboard](examples/ex_7_llm_evaluation_monitoring_dashboard/LLM_Evaluation_And_Monitoring_Dashboard.md)
+- Example A: [Phoenix - Tracing with LlamaIndex](examples/ex_7_llm_evaluation_monitoring_dashboard/Phoenix_Tracing_With_LlamaIndex.ipynb)
+- Example B: [Phoenix - Model Evaluation with LangChain](examples/ex_7_llm_evaluation_monitoring_dashboard/Phoenix_Model_Evaluation_With_LangChain.ipynb)
+- Example C: [Phoenix - LLM Evals](examples/ex_7_llm_evaluation_monitoring_dashboard/Phoenix_LLM_Evals.ipynb)
+- Example D: [Phoenix - Embedding Analysis](examples/ex_7_llm_evaluation_monitoring_dashboard/Phoenix_Embedding_Analysis.ipynb)
+- Example E: [Phoenix - UMAP-based Exploratory Data Analysis](examples/ex_7_llm_evaluation_monitoring_dashboard/Phoenix_UMAP_Based_Exploratory_Data_Analysis.ipynb)
+- Example F: [Phoenix - Exportable Clusters](examples/ex_7_llm_evaluation_monitoring_dashboard/Phoenix_Exportable_Clusters.ipynb)
 
 <p align="center">
 <img src="images/llm_eval_mon_dashboard.png" width="400" alt="LLM Dashboard Process">
@@ -413,7 +425,7 @@ To go to this section click [LLM Evaluation and Monitoring Dashboard](examples/e
 
 Let's create a network of chatbots that can communicate with each other and generate text based on each other's output. This example will cover how to create a chatbot network using LLM models and simulate a conversation between the chatbots. Users can use this network to generate creative and engaging text that can be used in a variety of applications, scenarios, and modeling use cases.
 
-To go to this section click [LLM Chatbot Network](examples/ex_8_llm_chatbot_network)
+To go to this section click [LLM Chatbot Network](examples/ex_8_llm_chatbot_network/LLM_Chatbot_Network.md)
 
 <p align="center">
 <img src="images/chatbot_network.png" width="400" alt="Chatbot Network Process">

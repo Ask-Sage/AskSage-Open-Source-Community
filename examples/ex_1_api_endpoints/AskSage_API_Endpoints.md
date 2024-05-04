@@ -8,6 +8,8 @@ This first example is just a high-level overview of interfacing with the AskSage
 <img src="images/api_interface.png" width="800" alt="LLM Comparison Process">
 </p>
 
+> Get Started and Navigate to the jupyter notebook example [here!📝](asksage_api_overview.ipynb)
+
 
 More detailed examples will be provided in subsequent examples and tutorials, which will also inclide real-world use cases and examples.
 
