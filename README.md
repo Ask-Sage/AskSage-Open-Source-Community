@@ -1,11 +1,6 @@
 
 #  <center> AskSage Overview - Open Source Community </center>
 
-<audio controls>
-  <source src="audio_ai_voices/Ask_Sage_Intro.mp3" type="audio/mpeg">
-If you can't see the audio player, you can download the audio file [here](audio_ai_voices/Ask_Sage_Intro.mp3) and play it with your favorite audio player to get an intro of this repository. 
-</audio>
-
  <center> <img src="images/AskSage_Logo.png" alt="AskSage Logo" height="200" width="200"> </center>
 
 Welcome to the AskSage Overview repository! 🎉
