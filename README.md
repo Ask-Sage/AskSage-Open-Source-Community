@@ -31,7 +31,7 @@ If you have any questions or need help, feel free to reach out to the maintainer
     - [API Documentation](#api-documentation)
       - [User API to get access-token and create datasets:](#user-api-to-get-access-token-and-create-datasets)
       - [Server API for query, training and more:](#server-api-for-query-training-and-more)
-      - [Python API Clinet Endpoints:](#python-api-clinet-endpoints)
+      - [Python API Client Endpoints:](#python-api-client-endpoints)
     - [API Tokens and Keys](#api-tokens-and-keys)
       - [Creating an API Key](#creating-an-api-key)
       - [Getting Access token (valid for 24 hours) using the REST API](#getting-access-token-valid-for-24-hours-using-the-rest-api)
@@ -156,7 +156,7 @@ This information is used to interact with the AskSage API. The user can query mo
 
 </center>
 
-#### Python API Clinet Endpoints:
+#### Python API Client Endpoints:
 
 | Function Name               | Description                                           |
 |-----------------------------|-------------------------------------------------------|
@@ -308,7 +308,8 @@ To go to this section click [AI Ethics](examples/ex_0_ai_ethics/AI-Ethics.md)
 This example will cover how to use the AskSage API endpoints and what to expect in the responses at a high level. The follow on examples will show how the endpoints can be used in a real-world scenarios to create useful applications, tools, or services. 
 
 - To go to this section click [API Endpoints](examples/ex_1_api_endpoints/AskSage_API_Endpoints.md)
-- Skip to the jupyter notebook example [here](examples/ex_1_api_endpoints/asksage_api_overview.ipynb)
+- Skip to the jupyter notebook example [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/asksage_api_overview.ipynb)
+
 
 
 <p align="center">
@@ -458,9 +459,9 @@ Happy learning! 📚🧠🚀
 
 ## Definitions To Know 
 
-We will be providing a list of definitions that are important to know when working with Generative AI. These definitions will help users understand the terminology used in the field of generative AI within each example and how to apply it to their own projects. 
+We will be providing a list of vocabulary that are important to know when working with Generative AI or Machine Learning. These terms will help users understand the terminology used in the field of AI/Machine Learning and how to apply it in their projects.
 
-For example here are some definitions to know when working with Generative AI: 
+For example here are some terms to know when working with Generative AI:
 
 - Generative AI
 - Large Language Model
@@ -478,6 +479,9 @@ For example here are some definitions to know when working with Generative AI:
 - Fine-Tuning
 - Multi-Modal
 - Edge Device
+
+To view the full list of definitions click [Defintions To Know](study_materials/AI_ML_Vocabulary.md)
+
 
 ## Video 
 - Link to YouTube Videos going through this repository (WILL BE ADDED LATER 🚧)
