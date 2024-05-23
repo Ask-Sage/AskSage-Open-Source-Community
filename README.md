@@ -295,7 +295,8 @@ After installing packages from `requirements.txt`, you may need to restart your 
 
 This is not really an example but more of a discussion on the ethical implications of using AI and how to mitigate any potential risks. We place a strong emphasis that a user needs to be well trained on how AI works, but also provide a clear understanding that what is generated through GenAI tools may not always be correct. 
 
-To go to this section click [AI Ethics](examples/ex_0_ai_ethics/AI-Ethics.md)
+- To go to this sections overview [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_0_ai_ethics/AI-Ethics.md)
+
 
 <p align="center">
 <img src="images/AI_Ethics.png" width="700" alt="GenAI Process">
@@ -307,9 +308,8 @@ To go to this section click [AI Ethics](examples/ex_0_ai_ethics/AI-Ethics.md)
 
 This example will cover how to use the AskSage API endpoints and what to expect in the responses at a high level. The follow on examples will show how the endpoints can be used in a real-world scenarios to create useful applications, tools, or services. 
 
-- To go to this section click [API Endpoints](examples/ex_1_api_endpoints/AskSage_API_Endpoints.md)
-- Skip to the jupyter notebook example [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/asksage_api_overview.ipynb)
-
+- AskSage API Endpoints Overview [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/AskSage_API_Endpoints.md)
+- AskSage API Code Examples [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/asksage_api_overview.ipynb)
 
 
 <p align="center">
@@ -318,18 +318,18 @@ This example will cover how to use the AskSage API endpoints and what to expect 
 
 #### 2. Prompt Engineering
 
-🚧 In Construction 🚧 
+🚧 In Construction 🚧 --> Full Release Coming Soon!
 
 This example will cover how to interact with a LLM model and how to use prompt engineering to generate high-quality text to be used to guide the model in generating the desired output. Prompt engineering is a powerful and necessary skill that can be used to control the output of a language model and generate text that meets specific criteria or requirements. 
 
-- To go to this section click [Prompt Engineering](examples/ex_2_prompt_engineering/Prompt_Engineering.md)
-- Example A: [Basic Overview of Prompt Engineering](examples/ex_2_prompt_engineering/Basic_Prompt_Engineering.ipynb)
-- Example B: [Prompt Engineering For Code Generation](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Code_Generation.ipynb)
-- Example C: [Prompt Engineering For Grant Writing](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Grant_Writing.ipynb)
-- Example D: [Prompt Engineering For Writing A Speech](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Writing_A_Speech.ipynb)
-- Example E: [Prompt Engineering For Recipe Generation](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Recipe_Generation.ipynb)
-- Example F: [Prompt Engineering For Project Management](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Project_Management.ipynb)
-- Example G: [Prompt Engineering - Detailed Explanation On Underlying Concepts and Techniques](examples/ex_2_prompt_engineering/Prompt_Engineering_Detailed_Explanation.ipynb)
+- Prompt Engineering Overview [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_2_prompt_engineering/prompt_engineering_overview.md)  
+- Example A: [Prompt Engineering For Code Generation](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Code_Generation.ipynb)
+- Example B: [Prompt Engineering For Grant Writing](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Grant_Writing.ipynb)
+- Example C: [Prompt Engineering For Writing A Speech](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Writing_A_Speech.ipynb)
+- Example D: [Prompt Engineering For Recipe Generation](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Recipe_Generation.ipynb)
+- Example E: [Prompt Engineering For Project Management](examples/ex_2_prompt_engineering/Prompt_Engineering_For_Project_Management.ipynb)
+- Example F: [Prompt Engineering - Detailed Explanation On Underlying Concepts and Techniques](examples/ex_2_prompt_engineering/Prompt_Engineering_Detailed_Explanation.ipynb)
+- Example G: [Prompt Engineering - Chatbot Creation](examples/ex_2_prompt_engineering/Prompt_Engineering_Chatbot_Creation.ipynb)
 
 <p align="center">
 <img src="images/prompt_engineering.png" width="400" alt="Prompt Engineering Process">
