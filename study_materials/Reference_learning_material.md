@@ -25,26 +25,20 @@ _Please note that no material will be added to this document without thorough re
   - [Videos](#videos)
   - [Code Repositories and Examples](#code-repositories-and-examples)
 
-
-
-
-
-
-
-
-
 ## Online Courses
 
 | Count | Name | Link to Source | Subject Focus |
 |-------|------|----------------|---------------|
-| 1     |      |                |               |
-| 2     |      |                |               |
+| 1     |ChatGPT Prompt Engineering for Developers | [DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) | GenAI Prompt Engineering |
+| 2     |Building Systems with the ChatGPT API | [DeepLearning.AI](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/) | GenAI API |
 
 ## Books
 
 | Count | Name | Link to Source | Subject Focus |
 |-------|------|----------------|---------------|
 | 1     | The StatQuest Illustration Guide to Machine Learning | [Amazon](https://www.amazon.com/StatQuest-Illustrated-Guide-Machine-Learning/dp/B0BLM4TLPY) | Machine Learning |
+| 2     | Build a Large Language Model (From Scratch)| [Manning](https://www.manning.com/books/build-a-large-language-model-from-scratch) | GenAI LLM |
+| 3     | Neural Networks from Scratch in Python | [nnfs](https://nnfs.io/order) | Machine Learning |
 
 ## Published Journals/Articles
 
@@ -57,8 +51,8 @@ _Please note that no material will be added to this document without thorough re
 
 | Count | Name | Link to Source | Subject Focus |
 |-------|------|----------------|---------------|
-| 1     |      |                |               |
-| 2     |      |                |               |
+| 1     | Open AI Documentation     | [OpenAI](https://platform.openai.com/docs/introduction)           | GenAI       |
+
 
 ## Videos
 

@@ -91,9 +91,11 @@ Whether you're new to the field or looking to polish your technical language, th
 - **Vector Embedding** - A representation of data where similar data points are co-located in a lower-dimensional space.
 - **Prompt Engineering** - The process of designing and optimizing the prompts used to interact with AI models.
 - **Fine-Tuning** - The process of tweaking a pre-trained model on a specific dataset to improve its performance on that dataset.
+- **Data Leakage** - The unintentional sharing of information between the training and testing datasets.
 
 ## Validation and Error Analysis
-- **Cross Validation** - A technique for assessing how the results of a statistical analysis will generalize to an independent data set.
+- **Cross Validation** - A technique for assessing how the results of a statistical analysis will generalize to an independent data set. Folded into k-folds, typically 5 or 10.
+- Leave-One-Out Cross Validation - A technique for assessing how the results of a statistical analysis will generalize to an independent data set by leaving out one data point at a time.
 - **Error** - The difference between the predicted value by the model and the actual value.
 - **Regression** - A type of predictive modeling technique which investigates the relationship between a dependent (target) and independent variable (s) (predictor).
 - **Classification** - The process of predicting the class of given data points.
