@@ -11,7 +11,7 @@ This repository is a work in progress project 👷 and is intended to be a colle
 
 *Note: Only the AskSage API is available to paid subscribers.* 💵😭
 
-This is not an official repository of AskSage, but rather a community-driven effort to provide additional resources and examples for users of AskSage 🚀.
+This is a community-driven effort to provide additional resources and examples for users of AskSage 🚀.
 
 Visit the official AskSage website [here](https://www.asksage.ai/).
 
@@ -416,7 +416,6 @@ But first, we will use @arize-ai phoenix open source tool to create a dashboard 
 <img src="images/llm_eval_mon_dashboard.png" width="400" alt="LLM Dashboard Process">
 
 #### 8. LLM Chatbot Network
-
 🚧 In Construction 🚧 
 
 Let's create a network of chatbots that can communicate with each other and generate text based on each other's output. This example will cover how to create a chatbot network using LLM models and simulate a conversation between the chatbots. Users can use this network to generate creative and engaging text that can be used in a variety of applications, scenarios, and modeling use cases.
@@ -427,12 +426,18 @@ To go to this section click [LLM Chatbot Network](examples/ex_8_llm_chatbot_netw
 <img src="images/chatbot_network.png" width="400" alt="Chatbot Network Process">
 </p>
 
-### Error Handling 
+### 9. Additional Requested Examples 
+Here we are providing a list of additional examples that originate from users asking for specific examples or use cases. If you have a specific example or use case you would like to see, please reach out to us and we will do our best to create an example that meets your needs. The best way to reach out to us is by joining our discord server and posting your request there [Discord - AskSage 💬](https://discord.gg/upxuAdNvjY):
 
+- Example 01: Leveraging a LLM to write a description of photos provided by a user. [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_9_additional_requested_examples/ex_1_llm_interpretation_description.ipynb)
+
+
+### Error Handling 
 The AskSage API may return errors in certain situations, such as when an invalid request is made or when the rate limit is exceeded. Users should be familiar with the error codes and messages returned by the API and handle them appropriately in their code.
 
-### Best Practices 
+- How to use a LLM to 
 
+### Best Practices 
 Here are some best practices to keep in mind when working with the AskSage API:
 
 - Keep your API key and access token secure and do not share them with others.
@@ -448,7 +453,6 @@ Here are some best practices to keep in mind when working with the AskSage API:
 - Have fun and be creative with your use of the API to explore new possibilities and applications for generative AI.
 
 ## Other Resources Related to GenerativeAI (GenAI)
-
 We will provide additional pdf documents that will contain resources related to GenerativeAI (GenAI). This document will include links to articles, books, tutorials, videos, and other content that may be helpful for users who are interested in learning more about generative AI and how to use it effectively.
 
 Our goal is to provide a comprehensive list of resources that cover a wide range of topics related to generative AI, including natural language processing, computer vision, reinforcement learning, and more. We will also include resources that cover specific models and tools that are commonly used in the field of generative AI.
@@ -458,7 +462,6 @@ If you have any suggestions for resources to include in this document, please fe
 Happy learning! 📚🧠🚀
 
 ## Definitions To Know 
-
 We will be providing a list of vocabulary that are important to know when working with Generative AI or Machine Learning. These terms will help users understand the terminology used in the field of AI/Machine Learning and how to apply it in their projects.
 
 For example here are some terms to know when working with Generative AI:
@@ -482,12 +485,10 @@ For example here are some terms to know when working with Generative AI:
 
 To view the full list of definitions click [Defintions To Know](study_materials/AI_ML_Vocabulary.md)
 
-
 ## Video 
 - Link to YouTube Videos going through this repository (WILL BE ADDED LATER 🚧)
 
 ## Requested Features or Enhancements to AskSage API
-
 Here are some features or enhancements that we would like to see added to the AskSage API: 
 
 Each item will have a link to the example that will be created to demonstrate where the feature or enhancement can be used.
@@ -505,16 +506,13 @@ Each item will have a link to the example that will be created to demonstrate wh
 - An endpoint that allows to select a database that a user created and then see all the content that was added to the database and being able to delete it. [API Endpoints](examples/ex_1_api_endpoints)
 
 ## Bugs or Issues 
-
 Any bugs or issues found in the AskSage API should be reported to the AskSage team directly. If you encounter any problems with the API, please reach out to the AskSage team for assistance. Additionally, you can report bugs or issues in this repository and we will test and verify them before forwarding them to the AskSage team.
 
 ## License
-
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more information.
 
 ## Thanks
-
-A special thanks to the AskSage team for creating a flexible and powerful platform that enables users to explore the possibilities of generative AI. We appreciate your hard work and dedication to providing a valuable resource for the community. Also, a big thank you to the future contributors and users who will help make this repository a valuable resource for all. 🙏🚀
+A special thanks to everyone contributing and the AskSage team for creating a flexible and powerful platform that enables users to explore the possibilities of generative AI. We appreciate your hard work and dedication to providing a valuable resource for the community. Also, a big thank you to the future contributors and users who will help make this repository a valuable resource for all. 🙏🚀
 
 ## Contributors
 - Original Contributor: [Mark Espinoza](https://www.linkedin.com/in/mark-espinoza-889662200/)
