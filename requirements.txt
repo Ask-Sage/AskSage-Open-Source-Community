@@ -3,4 +3,3 @@ numpy==1.25.0
 pandas==2.0.2
 requests==2.32.0
 
-Note: you may need to restart the kernel to use updated packages.
