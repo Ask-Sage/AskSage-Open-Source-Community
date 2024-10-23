@@ -215,7 +215,9 @@ Users can obtain an API key from the Ask Sage platform and use it to generate an
 
 There are three methods to which a user can authenticate with the Ask Sage Endpoints:
 
- <center> <img src="images/api-authentication-options.png" alt="Authentication Options" height="350" width="375"> </center>
+<p align="center">
+ <img src="images/api-authentication-options.png" alt="Authentication Options" height="350" width="375"> 
+</p>
 
  ----------------------------
 
