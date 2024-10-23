@@ -22,6 +22,7 @@ The Ask Sage API is documented using Swagger, which provides detailed informatio
 | /get-user-logins | Get your last logins (limited to 5 by default) |
 | /get-user-logs | Get your last prompts |
 | /add-dataset| Add a new dataset |
+| /assign-dataset | Assign a dataset |
 | /delete-datasets| Deletes a dataset |
 </center>
 
@@ -42,6 +43,8 @@ This information is used to interact with the Ask Sage API. The user can query m
 | /get-models | Returns a list of available models via the Ask Sage services |
 | /query | Main endpoint for generating completions based on the user's input |
 | /query_with_file | Query with file endpoint for generating completions based on the user's input |
+| /query-plugin | Query with plugin endpoint for generating completions based on the user's input |
+| /execute-plugin | Execute a plugin with the provided content |
 | /follow_up_questions | Endpoint for generating follow-up questions based on the user's input |
 | /tokenizer | Endpoint for getting tokens of string value |
 | /get-personas | Endpoint for getting the tokens of string | 
@@ -67,7 +70,6 @@ Note these are the ones available in the Python client as of the time of writing
 |-----------------------------|-------------------------------------------------------|
 | `get_models`                | Get the available models from the Ask Sage service.   |
 | `add_dataset`               | Adds a new dataset                                    |
-| `append_chat`               | Appends a chat to a chat history                      |
 | `delete_dataset`            | Deletes a specified dataset                           |
 | `assign_dataset`            | Assigns a dataset                                     |
 | `get_user_logs`             | Retrieves all logs for user                           |
