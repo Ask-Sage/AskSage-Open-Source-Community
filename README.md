@@ -1,42 +1,54 @@
+> 🐍 Ask Sage Python Client v1.2.4
 
-#  <center> AskSage Overview - Open Source Community </center>
+#  <center> Ask Sage API - Overview </center>
 
- <center> <img src="images/AskSage_Logo.png" alt="AskSage Logo" height="200" width="200"> </center>
+<p align="center">
+<img src="images/AskSage_Logo.png" alt="Ask Sage Logo" height="200" width="200"> 
+</p>
 
-Welcome to the AskSage Overview repository! 🎉
+Welcome to the Ask Sage Overview repository! 🎉
 
-This repository is a work in progress project 👷 and is intended to be a collection of sample code 🧑‍💻 and documentation 📄 on interacting with AskSage via the AskSage API. Additional content may include actual steps 🪜 within the AskSage platform, but for the most part this repository will focus on utilizing the API and creating mini proof-of-concept projects. 
+This repository is a work in progress project 👷 and is intended to be a collection of sample code 🧑‍💻 and documentation 📄 on interacting with Ask Sage via the Ask Sage API. Additional content may include actual steps 🪜 within the Ask Sage platform, but for the most part this repository will focus on utilizing the API and creating mini proof-of-concept projects. 
 
 > Examples provided will cover a wide range of topics related to generative AI and will be designed to be accessible to users with varying levels of experience with AI and programming. At the moment we have provided a list of ideas of what will be covered in this repository and will be updated as more content is added. 
 
-*Note: Only the AskSage API is available to paid subscribers.* 💵😭
+*Note: Only the Ask Sage API is available to paid subscribers.* 💵😭
 
-This is a community-driven effort to provide additional resources and examples for users of AskSage 🚀.
+This is a community-driven effort to provide additional resources and examples for users of Ask Sage 🚀.
 
 Visit the official AskSage website [here](https://www.asksage.ai/).
 
 If you are interested in contributing to this repository, please see the [Contributing Guidelines](CONTRIBUTING.md) for more information.
 
-If you have any questions or need help, feel free to reach out to the maintainers of this repository or the AskSage team directly.
+If you have any questions or need help, feel free to reach out to the maintainers of this repository or the Ask Sage team directly.
+
+--------------------------------
+
+Additional resources: 
+
+- Discord - Ask Sage 💬 [Join Here](https://discord.gg/upxuAdNvjY)
+- Ask Sage - User Documentation [Ask Sage User Documentation](https://docs.asksage.ai/)
+
+--------------------------------
 
 <span style="color:yellow;font-size:smaller;font-style:italic">Note: the content in this repository may be outdated or incorrect, so please refer to the official AskSage documentation for the most up-to-date information.</span>
 
-# Table of Contents 
-- [ AskSage Overview - Open Source Community ](#-asksage-overview---open-source-community-)
+# Table of Contents
+- [ Ask Sage API - Overview ](#-ask-sage-api---overview-)
 - [Table of Contents](#table-of-contents)
-  - [What is AskSage?](#what-is-asksage)
+  - [What is Ask Sage?](#what-is-ask-sage)
   - [What models are available?](#what-models-are-available)
-  - [How to access AskSage?](#how-to-access-asksage)
-  - [AskSage API](#asksage-api)
-    - [API Documentation](#api-documentation)
-      - [User API to get access-token and create datasets:](#user-api-to-get-access-token-and-create-datasets)
-      - [Server API for query, training and more:](#server-api-for-query-training-and-more)
+  - [How to access Ask Sage?](#how-to-access-ask-sage)
+  - [Ask Sage API](#ask-sage-api)
+    - [API Endpoints Overview](#api-endpoints-overview)
+      - [User API:](#user-api)
+      - [Server API:](#server-api)
       - [Python API Client Endpoints:](#python-api-client-endpoints)
-    - [API Tokens and Keys](#api-tokens-and-keys)
-      - [Creating an API Key](#creating-an-api-key)
-      - [Getting Access token (valid for 24 hours) using the REST API](#getting-access-token-valid-for-24-hours-using-the-rest-api)
-      - [Getting Access token (valid for 24 hours) using the Ask Sage Python Client](#getting-access-token-valid-for-24-hours-using-the-ask-sage-python-client)
-    - [API Response](#api-response)
+    - [Generating API Keys](#generating-api-keys)
+    - [API Authentication Set Up](#api-authentication-set-up)
+      - [1. Ask Sage Python API Client](#1-ask-sage-python-api-client)
+      - [2. 24 Hour - Access Token](#2-24-hour---access-token)
+      - [3. Static API Key](#3-static-api-key)
     - [Examples](#examples)
       - [0. AI Ethics](#0-ai-ethics)
       - [1. API Endpoints](#1-api-endpoints)
@@ -47,26 +59,25 @@ If you have any questions or need help, feel free to reach out to the maintainer
       - [6. LLM Deployment On A Edge Device](#6-llm-deployment-on-a-edge-device)
       - [7. LLM Evaluation and Monitoring Dashboard](#7-llm-evaluation-and-monitoring-dashboard)
       - [8. LLM Chatbot Network](#8-llm-chatbot-network)
+    - [9. Additional Requested Examples](#9-additional-requested-examples)
     - [Error Handling](#error-handling)
     - [Best Practices](#best-practices)
   - [Other Resources Related to GenerativeAI (GenAI)](#other-resources-related-to-generativeai-genai)
   - [Definitions To Know](#definitions-to-know)
   - [Video](#video)
-  - [Requested Features or Enhancements to AskSage API](#requested-features-or-enhancements-to-asksage-api)
+  - [Requested Features or Enhancements to Ask Sage API](#requested-features-or-enhancements-to-ask-sage-api)
     - [Issues](#issues)
     - [Enhancements](#enhancements)
   - [Bugs or Issues](#bugs-or-issues)
   - [License](#license)
-  - [Thanks](#thanks)
-  - [Contributors](#contributors)
   - [Sources](#sources)
   - [Tools Used](#tools-used)
 
-## What is AskSage? 
+## What is Ask Sage? 
 AskSage is a agnostic Generative AI platform that gives access to a wide range of AI models and tools. The platform is designed to be easy to use and integrate into existing workflows that can be further customized to meet the needs of the user/organization.
 
 ## What models are available?
-Uniquely designed to be agnostic, AskSage provides access to a wide range of models that can be used for a variety of tasks. Some of the models available include but not limited to:
+Uniquely designed to be agnostic, Ask Sage provides access to a wide range of models that can be used for a variety of tasks. Some of the models available include but not limited to:
 
 <center>
 
@@ -83,41 +94,36 @@ Uniquely designed to be agnostic, AskSage provides access to a wide range of mod
 | DALL-E v3 | A language model developed by OpenAI that specializes in generating images. |
 </center>
 
-Here is the actual list of available models on the AskSage platform as of April 19, 2024:  
-
+Here is the actual list of available models on the Ask Sage platform as of Oct 22, 2024:  
 
 ```python
-models = ["cohere", "mpt-7b-chat", "claude2", "claude-3-opus", "claude-3-sonnet", "llma3", "aws-bedrock-titan", "google-bison", "google-gemini-pro", "mistral-large", "openai_gpt", "gpt4", "gpt4-32k", "gpt4-vision", "gpt35-16k", "gpt-gov", "gpt4-gov", "dall-e-2", "dall-e-3", "davinci"]
+models = ['aws-bedrock-titan', 'llma3', 'claude2', 'claude-3-opus', 'claude-3-sonnet', 'claude-35-sonnet', 'cohere', 'mistral-large', 'gpt-gov', 'gpt4-gov', 'gpt', 'gpt4', 'gpt4-32k', 'gpt35-16k', 'gpt4-vision', 'gpt-4o', 'gpt-4o-mini', 'dall-e-2', 'dall-e-3', 'google-bison', 'google-gemini-pro', 'gpt-4o-gov', 'groq-70b', 'gpt-o1', 'gpt-o1-mini', 'xai-grok']
 ```
 
-> <span style="color:yellow">More models can be added by the AskSage team that are specific to a user's needs. (additional costs may apply)</span>
+> <span style="color:yellow">More models can be added by the Ask Sage team that are specific to a user's needs. (additional costs may apply)</span>
 
 
 **Note:** The models listed above are subject to change and more models may be added in the future. 
 
-## How to access AskSage? 
-There are two main ways to interact with AskSage:
+## How to access Ask Sage? 
+There are two main ways to interact with Ask Sage:
 
-1. **AskSage Platform** - The AskSage platform provides a user-friendly interface that allows users to interact with the models and tools available on the platform. Users can input text, files, code, or other data and receive generated output from the models.
-2. **AskSage API** - The AskSage API allows users to interact with the models and tools available on the platform programmatically. Users can send requests to the API and receive responses in JSON format. This allows for more flexibility and customization in how users interact with the models.
+1. **Ask Sage Platform** - The Ask Sage platform provides a user-friendly interface that allows users to interact with the models and tools available on the platform. Users can input text, files, code, or other data and receive generated output from the models.
+2. **Ask Sage API** - The Ask Sage API allows users to interact with the models and tools available on the platform programmatically. Users can send requests to the API and receive responses in JSON format. This allows for more flexibility and customization in how users interact with the models.
    1. Must be a registered user and be a paid subscriber to access the API. 
 
-## AskSage API 
-The AskSage API provides a RESTful interface for interacting with the models available through the platform. Users can send requests to the API and receive responses in JSON format. The API is designed to be easy to use and integrate into existing workflows. 
+## Ask Sage API 
+The Ask Sage API provides a RESTful interface for interacting with the models available through the platform. Users can send requests to the API and receive responses in JSON format. The API is designed to be easy to use and integrate into existing workflows. 
 
 Overall, this repository will provide setup instructions, examples, and other resources as one begins to explore the capabilities of Generative AI and how it can be used in real-world scenarios.
 
-### API Documentation 
+### API Endpoints Overview
 
-The AskSage API is documented using Swagger, which provides detailed information about the available endpoints, request parameters, response formats, and authentication methods. The API documentation can be accessed using the following links:
+The Ask Sage API is documented using Swagger, which provides detailed information about the available endpoints, request parameters, response formats, and authentication methods.
 
-Python API Client: https://pypi.org/project/asksageclient/
-
-#### User API to get access-token and create datasets:
+#### User API:
 - Documentation: https://app.swaggerhub.com/apis-docs/NICOLASCHAILLAN_1/user-api/1.0
-- URL for this API is : https://api.asksage.ai/user/
-
-This information is used to authenticate and get access to the AskSage API. Also, the user can create datasets and get access to the server API. 
+- The Base URL for the User API is: [ Base URL: api.asksage.ai/user/ ]
 
 > The following table shows the available endpoints in the User API:
 
@@ -129,14 +135,15 @@ This information is used to authenticate and get access to the AskSage API. Also
 | /get-user-logins | Get your last logins (limited to 5 by default) |
 | /get-user-logs | Get your last prompts |
 | /add-dataset| Add a new dataset |
+| /assign-dataset | Assign a dataset |
 | /delete-datasets| Deletes a dataset |
 </center>
 
-#### Server API for query, training and more: 
+#### Server API: 
 - Documentation: https://app.swaggerhub.com/apis-docs/NICOLASCHAILLAN_1/server_ask-sage_api/1.0
-- URL for this API is: https://api.asksage.ai/server/
+- The Base URL for the Server API is: [ Base URL: api.asksage.ai/server/ ]
 
-This information is used to interact with the AskSage API. The user can query models, select/get personas, get datasets, train models and more. 
+This information is used to interact with the Ask Sage API. The user can query models, select/get personas, get datasets, train models and more. 
 
 > The following table shows the available endpoints in the Server API:
 
@@ -144,8 +151,11 @@ This information is used to interact with the AskSage API. The user can query mo
 
 | Endpoint | Description |
 |:---:|:---:|
+| /get-models | Returns a list of available models via the Ask Sage services |
 | /query | Main endpoint for generating completions based on the user's input |
 | /query_with_file | Query with file endpoint for generating completions based on the user's input |
+| /query-plugin | Query with plugin endpoint for generating completions based on the user's input |
+| /execute-plugin | Execute a plugin with the provided content |
 | /follow_up_questions | Endpoint for generating follow-up questions based on the user's input |
 | /tokenizer | Endpoint for getting tokens of string value |
 | /get-personas | Endpoint for getting the tokens of string | 
@@ -153,13 +163,17 @@ This information is used to interact with the AskSage API. The user can query mo
 | /get-plugins | Returns a list of available plugins |
 | /get-train | Trains the model based on the user's input |
 | /file | Converts a supported file to plain/text |
-
 </center>
 
 #### Python API Client Endpoints:
 
+The Python API client is documented and managed via the following link: https://pypi.org/project/asksageclient/
+
+<center>
+
 | Function Name               | Description                                           |
 |-----------------------------|-------------------------------------------------------|
+| `get_models`                | Get the available models from the Ask Sage service.   |
 | `add_dataset`               | Adds a new dataset                                    |
 | `delete_dataset`            | Deletes a specified dataset                           |
 | `assign_dataset`            | Assigns a dataset                                     |
@@ -168,6 +182,7 @@ This information is used to interact with the AskSage API. The user can query mo
 | `query`                     | Interact with the /query endpoint of the Ask Sage API. |
 | `query_with_file`           | Executes a query using a file                         |
 | `query_plugin`              | Executes a query using a specific plugin              |
+| `execute_plugin`            | Executes a plugin with the provided content           |
 | `follow_up_questions`       | Interact with the /follow-up-questions endpoint of the Ask Sage API. |
 | `tokenizer`                 | Interact with the /tokenizer endpoint of the Ask Sage API. |
 | `get_personas`              | Get the available personas from the Ask Sage service. |
@@ -178,21 +193,18 @@ This information is used to interact with the AskSage API. The user can query mo
 | `train`                     | Train the model based on the provided content.        |
 | `train_with_file`           | Train the dataset based on the provided file.         |
 | `file`                      | Upload a file to the Ask Sage service.                |
+</center>
 
-> In the Example section, we will provide examples of how to use these endpoints to interact with the AskSage API and generate text using the models available on the platform.
+> In the Example section, we will provide examples of how to use these endpoints to interact with the Ask Sage API and generate text using the models available on the platform.
 
-### API Tokens and Keys
+### Generating API Keys
 
-*The AskSage API uses token-based authentication to ensure that only authorized users can access the API. Do not share your API token/key with anyone and keep it secure at all times.*
-
-#### Creating an API Key 
-
-1. **AskSage Platform** - Users can obtain an API key from the AskSage platform and use it to generate an access token. The API key is a unique identifier that is used to authenticate the user and grant access to the API.
+Users can obtain an API key from the Ask Sage platform and use it to generate an access token. The API key is a unique identifier that is used to authenticate the user and grant access to the API endpoints. 
 
 
 > Navigate to the menu options and select the 'Account & Tokens' option. 
 <p align="center">
-<img src="images/Menu_Bar_Access_Token.png" width="700" alt="AskSage Menu Option 'Account & Tokens">
+<img src="images/Menu_Bar_Access_Token.png" width="700" alt="Ask Sage Menu Option 'Account & Tokens">
 </p>
 
 > Scroll down to the 'API Keys' section and click on the 'Generate API Key' button.
@@ -201,89 +213,182 @@ This information is used to interact with the AskSage API. The user can query mo
 > 
 > The API Key will be generated and displayed on the screen. Copy the API Key and store it in a secure location.
 
-
 !['Create API Key'](images/apikey_creation.gif)
 
-------
+### API Authentication Set Up 
 
-#### Getting Access token (valid for 24 hours) using the REST API 
+There are three methods to which a user can authenticate with the Ask Sage Endpoints:
 
-1. **API Token Endpoint** - Users can obtain an access token by sending a request to the API token endpoint. The request must include the API key and the user's email address. The response will contain the access token that can be used to authenticate future requests to the API.
+<p align="center">
+ <img src="images/api-authentication-options.png" alt="Authentication Options" height="350" width="375"> 
+</p>
+
+ ----------------------------
+
+ #### 1. Ask Sage Python API Client 
+
+The API key and email can be used to authenticate the user and grant access via the Ask Sage Python Client. The API key and user email will be included in the request headers.
+
+For example, the following code snippet demonstrates how to create an instance of the AskSageClient class and authenticate with the Ask Sage API using the API key and email:
+ 
+```python
+
+import json # Import the json module to work with JSON data
+import requests # Import the requests library to send HTTP requests
+from asksageclient import AskSageClient # Import the AskSageClient class from the asksageclient module
+
+# Function to load credentials from a JSON file
+def load_credentials(filename):
+    try:
+        with open(filename) as file:
+            return json.load(file)
+    except FileNotFoundError:
+        raise FileNotFoundError("The credentials file was not found.")
+    except json.JSONDecodeError:
+        raise ValueError("Failed to decode JSON from the credentials file.")
+
+# Load the credentials
+credentials = load_credentials('../../credentials.json')
+
+# Extract the API key, and email from the credentials to be used in the API request
+api_key = credentials['credentials']['api_key']
+email = credentials['credentials']['Ask_sage_user_info']['username']
+
+"""  
+class AskSageClient(
+    email: email, # The email address of the user
+    api_key: api_key, # The API key for the Ask Sage API, which can be obtained from the Ask Sage website
+    user_base_url: str = 'https://api.asksage.ai/user', # The base URL for the user API
+    server_base_url: str = 'https://api.asksage.ai/server' # The base URL for the server API
+)
+"""
+
+ask_sage_client = AskSageClient(email, api_key) # Create an instance of the AskSageClient class with the email and api_key 
+
+```
+
+Following this setup the user can now interact with the Ask Sage API using the AskSageClient object. 
+
+
+#### 2. 24 Hour - Access Token
+
+An access token is generated using the API key and email address with the endpoint '/get-token-with-api-key'. The access token is valid for 24 hours and can be used to authenticate requests to the Ask Sage API.
+
+This is a more secure method of authentication as the access token is only valid for a limited time and must be regenerated periodically.
 
 Here is a sample code snippet in Python that demonstrates how to obtain an access token using your email address and API key: 
 
-```python
-import requests # Import the requests library if not already installed using pip install requests
-
-# Set the API endpoint URL
-url = "https://api.asksage.ai/user/get-token-with-api-key" # URL for the API token endpoint
-
-# Set the email and password parameters
-params = {
-    "email": "your_email@your_domain.com", # Enter your email address
-    "api_key": "your_api_key", # Enter your API Key
-}
-
-# Send a POST request to the API endpoint
-response = requests.post(url, json=params)
-
-# Print the response
-print(response.json())
-
-# or utilize get-token-with-api-key endpoint
-params = {
-    "email": "your_email@your_domain.com", # Enter your email address
-    "api_key": "your_api_key" # Enter your API key
-}
-
-response = requests.post(url, json=params)
-
-print(response.json())
-```
-
-After using 'get-token-with-api-key', you should receive a response containing the access token that can be used to authenticate future requests to the AskSage API.
-
-```json
-{'response': {'access_token': 'string_generated'}, 'status': '200'}
-```
-Recommend storing the access token in a secure location and not hardcoding it into your code. It is recommended to use environment variables or a configuration file to store sensitive information like access tokens. 
-
-#### Getting Access token (valid for 24 hours) using the Ask Sage Python Client
-
-Here are the steps to access the AskSage API with the API Key
-
-**API Key** - The API key is a unique identifier that is associated with the user's account and is used to grant access to the API. AskSage provides a python client that can be used to interact with the API, which will use the API key and user email to authenticate user. 
 
 ```python
-from asksageclient import AskSageClient # Import the AskSageClient class from the asksageclient module, if not already installed using pip install asksageclient
+import requests
 
-# authenticate using your email and API key references - both the user and server API URLs
-client = AskSageClient(email="your_email@your_domain.com", api_key="your_api_key") 
+# Define the endpoint URL
+url = "https://api.asksage.ai/user/get-token-with-api-key"
 
-"""
-class AskSageClient(
-    email: str,
-    api_key: str,
-    user_base_url: str = 'https://api.asksage.ai/user',
-    server_base_url: str = 'https://api.asksage.ai/server'
-)
-"""
+# Define the payload with the user's email and API key
+payload = {
+    "email": "your_email@your_domain.com",
+    "api_key": "sdfsdfsfr23456789" # Your API key generated from the Ask Sage platform
+}
+
+# Set the headers, if required (e.g., Content-Type)
+headers = {
+    "Content-Type": "application/json"
+}
+
+# Make the POST request
+response = requests.post(url, json=payload, headers=headers)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the JSON response
+    data = response.json()
+    # raw response
+    print(data)
+    # Extract the access token only from the response
+    access_token = data['response']['access_token']
+    print(access_token)
 ```
 
-From here the user can use the client object to interact with the AskSage API endpoints for the user and server API.  
-Similarly, the user email and password should be stored in a secure location and not hardcoded into the code.
+The generated access token can be used to authenticate requests to the Ask Sage API for the next 24 hours. Here is an example of how to use the access token to authenticate a request to any of the Ask Sage API endpoints:
 
-Reference https://pypi.org/project/asksageclient/ for more information on the AskSageClient. 
+```python
 
-### API Response
+import requests
 
-The AskSage API returns responses in JSON format, which is a common data format used for exchanging data between a client and a server. The JSON response will contain the output generated by the model, as well as any additional information that may be relevant to the request.
+# Define the access token obtained from the previous request - Note: You would want to store this securely and not hardcode it in your script/file.
+access_token = "fghjkl4567890" # Replace with the actual access token
+
+# Define the endpoint URL
+url = "https://api.asksage.ai/user/get-user-logins"  # Replace with the actual base URL of the API
+
+# Define the payload with the limit parameter
+payload = {
+    "limit": 1  # Replace with the desired limit (max is 100)
+}
+
+# Set the headers, including the Authorization header with the Bearer token
+headers = {
+    "x-access-tokens": access_token,
+    "Content-Type": "application/json"
+}
+
+# Make the POST request
+response = requests.post(url, json=payload, headers=headers)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the JSON response
+    data = response.json()
+    print("User Logins:", data)
+else:
+    print(f"Failed to get user logins. Status code: {response.status_code}")
+    print(f"Response: {response.text}")
+```
+
+#### 3. Static API Key
+Instead of generating an access token every time you need to access the API, you can pass the static API key where the token is expected. This is not as secure as generating a 24 hour access token, but it is a valid option for some use cases.
+
+> Note: The expected header variable is `x-access-tokens` and the value is the API key. There is no time limit on the API key, but it is recommended to regenerate it periodically for security reasons.
+
+```python
+import requests
+
+# Define the access token obtained from the previous request - Note: You would want to store this securely and not hardcode it in your script/file.
+access_token = api_key # 
+
+# Define the endpoint URL
+url = "https://api.asksage.ai/user/get-user-logins"  # Replace with the actual base URL of the API
+
+# Define the payload with the limit parameter
+payload = {
+    "limit": 1  # Replace with the desired limit (max is 100)
+}
+
+# Set the headers, including the Authorization header with the Bearer token
+headers = {
+    "x-access-tokens": access_token,
+    "Content-Type": "application/json"
+}
+
+# Make the POST request
+response = requests.post(url, json=payload, headers=headers)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the JSON response
+    data = response.json()
+    print("User Logins:", data)
+else:
+    print(f"Failed to get user logins. Status code: {response.status_code}")
+    print(f"Response: {response.text}")
+```
 
 --------------------------------
 
 ### Examples 
 
-These examples will be more focused on how one can interact with the AskSage API and what to expect in the response. Additionally, some mini projects will be created to demonstrate the capabilities of Generative AI and how it can be used in real-world scenarios. Although this repository is focused on the AskSage API, the examples will be general enough to be applied to other platforms that provide similar services but may have different endpoints or parameters.
+These examples will be more focused on how one can interact with the Ask Sage API and what to expect in the response. Additionally, some mini projects will be created to demonstrate the capabilities of Generative AI and how it can be used in real-world scenarios. Although this repository is focused on the Ask Sage API, the examples will be general enough to be applied to other platforms that provide similar services but may have different endpoints or parameters.
 
 Note: The examples at the moment are more focused on text-based models but will be expanded to the interaction of LLM's with other data types like images, audio, and video (multi-modal models). Going into those examples will lead to more complex projects and will require more resources and time to complete.
 
@@ -306,10 +411,10 @@ This is not really an example but more of a discussion on the ethical implicatio
 
 ✅ Done ✅ 
 
-This example will cover how to use the AskSage API endpoints and what to expect in the responses at a high level. The follow on examples will show how the endpoints can be used in a real-world scenarios to create useful applications, tools, or services. 
+This example will cover how to use the Ask Sage API endpoints and what to expect in the responses at a high level. The follow on examples will show how the endpoints can be used in a real-world scenarios to create useful applications, tools, or services. 
 
-- AskSage API Endpoints Overview [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/AskSage_API_Endpoints.md)
-- AskSage API Code Examples [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/asksage_api_overview.ipynb)
+- Ask Sage API Endpoints Overview [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/AskSage_API_Endpoints.md)
+- Ask Sage Python Client Example Notebook[![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_1_api_endpoints/asksage_python_client_overview.ipynb)
 
 
 <p align="center">
@@ -388,7 +493,7 @@ To go to this section click [Diagram Creation With LLMs](examples/ex_5_diagram_c
 
 🚧 In Construction 🚧 
 
-What about being able to deploy a LLM model on a edge device like a Raspberry Pi or Jetson Nano? This example will cover how to deploy a LLM model on a edge device and generate text utilizing the Asksage API. 
+What about being able to deploy a LLM model on a edge device like a Raspberry Pi or Jetson Nano? This example will cover how to deploy a LLM model on a edge device and generate text utilizing the Ask Sage API. 
 
 To go to this section click [LLM Deployment On A Edge Device](examples/ex_6_llm_deployment_edge_device/LLM_Deployment_On_A_Edge_Device.md)
 
@@ -427,7 +532,7 @@ To go to this section click [LLM Chatbot Network](examples/ex_8_llm_chatbot_netw
 </p>
 
 ### 9. Additional Requested Examples 
-Here we are providing a list of additional examples that originate from users asking for specific examples or use cases. If you have a specific example or use case you would like to see, please reach out to us and we will do our best to create an example that meets your needs. The best way to reach out to us is by joining our discord server and posting your request there [Discord - AskSage 💬](https://discord.gg/upxuAdNvjY):
+Here we are providing a list of additional examples that originate from users asking for specific examples or use cases. If you have a specific example or use case you would like to see, please reach out to us and we will do our best to create an example that meets your needs. The best way to reach out to us is by joining our discord server and posting your request there [Discord - Ask Sage 💬](https://discord.gg/upxuAdNvjY):
 
 - Example 01: Leveraging a LLM to write a description of photos provided by a user. [![Open File](https://img.shields.io/static/v1?message=Open%20File%20&logo=github&labelColor=grey&color=blue&logoColor=white&label=%20)](examples/ex_9_additional_requested_examples/ex_1_llm_interpretation_description.ipynb)
 
@@ -438,18 +543,18 @@ The AskSage API may return errors in certain situations, such as when an invalid
 - How to use a LLM to 
 
 ### Best Practices 
-Here are some best practices to keep in mind when working with the AskSage API:
+Here are some best practices to keep in mind when working with the Ask Sage API:
 
 - Keep your API key and access token secure and do not share them with others.
 - Be aware of the rate limits imposed by the API and adjust your usage accordingly.
-- Handle errors returned by the API gracefully and report them to AskSage if necessary.
-- Follow the API documentation and guidelines provided by AskSage to ensure that your requests are formatted correctly.
+- Handle errors returned by the API gracefully and report them to Ask Sage if necessary.
+- Follow the API documentation and guidelines provided by Ask Sage to ensure that your requests are formatted correctly.
 - Test your code thoroughly before deploying it to ensure that it works as expected.
 - Monitor your usage of the API and adjust your usage if necessary to avoid overages or rate limiting.
-- Provide feedback to AskSage on the API and any issues or suggestions you may have for improvement.
+- Provide feedback to Ask Sage on the API and any issues or suggestions you may have for improvement.
 - Stay up to date on changes to the API and any new features or endpoints that may be added in the future.
 - Document your code and keep track of any changes or updates you make to it over time.
-- Share your code and experiences with the AskSage community to help others learn and improve their own projects. (Please 🥹)
+- Share your code and experiences with the Ask Sage community to help others learn and improve their own projects. (Please 🥹)
 - Have fun and be creative with your use of the API to explore new possibilities and applications for generative AI.
 
 ## Other Resources Related to GenerativeAI (GenAI)
@@ -488,8 +593,8 @@ To view the full list of definitions click [Defintions To Know](study_materials/
 ## Video 
 - Link to YouTube Videos going through this repository (WILL BE ADDED LATER 🚧)
 
-## Requested Features or Enhancements to AskSage API
-Here are some features or enhancements that we would like to see added to the AskSage API: 
+## Requested Features or Enhancements to Ask Sage API
+Here are some features or enhancements that we would like to see added to the Ask Sage API: 
 
 Each item will have a link to the example that will be created to demonstrate where the feature or enhancement can be used.
 
@@ -501,21 +606,14 @@ Each item will have a link to the example that will be created to demonstrate wh
   - Also would the uploaded content be visible on the platform? At the moment it is not visible.
 
 ### Enhancements
-- Add an endpoint to get the names of the models available [API Endpoints](examples/ex_1_api_endpoints)
 - For the /get_user_logs endpoint, add a parameter to specify the number of logs to return if a user wants to only get a specific number of logs. Additionally, can add a parameter to specify ascending or descending order of the logs. (Maybe a date filter parameter) [API Endpoints](examples/ex_1_api_endpoints)
 - An endpoint that allows to select a database that a user created and then see all the content that was added to the database and being able to delete it. [API Endpoints](examples/ex_1_api_endpoints)
 
 ## Bugs or Issues 
-Any bugs or issues found in the AskSage API should be reported to the AskSage team directly. If you encounter any problems with the API, please reach out to the AskSage team for assistance. Additionally, you can report bugs or issues in this repository and we will test and verify them before forwarding them to the AskSage team.
+Any bugs or issues found in the Ask Sage API should be reported to the Ask Sage team directly. If you encounter any problems with the API, please reach out to the Ask Sage team for assistance. Additionally, you can report bugs or issues in this repository and we will test and verify them before forwarding them to the Ask Sage team.
 
 ## License
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more information.
-
-## Thanks
-A special thanks to everyone contributing and the AskSage team for creating a flexible and powerful platform that enables users to explore the possibilities of generative AI. We appreciate your hard work and dedication to providing a valuable resource for the community. Also, a big thank you to the future contributors and users who will help make this repository a valuable resource for all. 🙏🚀
-
-## Contributors
-- Original Contributor: [Mark Espinoza](https://www.linkedin.com/in/mark-espinoza-889662200/)
 
 ## Sources
 - https://github.com/jessesquires/.github - Thank you jessequires for the templats on the various files in the repository. 
