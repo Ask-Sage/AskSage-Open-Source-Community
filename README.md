@@ -2,7 +2,9 @@
 
 #  <center> Ask Sage API - Overview </center>
 
- <center> <img src="images/AskSage_Logo.png" alt="Ask Sage Logo" height="200" width="200"> </center>
+<p align="center">
+<img src="images/AskSage_Logo.png" alt="Ask Sage Logo" height="200" width="200"> 
+</p>
 
 Welcome to the Ask Sage Overview repository! 🎉
 
