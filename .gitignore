@@ -1,3 +1,6 @@
 /.DS_Store
 credentials.json
 
+.continue/docs/new-doc-1.yaml
+.continue/docs/new-doc-2.yaml
+.continue/docs/new-doc.yaml
