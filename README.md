@@ -122,7 +122,7 @@ Overall, this repository will provide setup instructions, examples, and other re
 The Ask Sage API is documented using Swagger, which provides detailed information about the available endpoints, request parameters, response formats, and authentication methods.
 
 #### User API:
-- Documentation: https://app.swaggerhub.com/apis-docs/NICOLASCHAILLAN_1/user-api/1.0
+- Documentation: https://app.swaggerhub.com/apis-docs/AskSage/user-api/1.0
 - The Base URL for the User API is: [ Base URL: api.asksage.ai/user/ ]
 
 > The following table shows the available endpoints in the User API:
@@ -140,7 +140,7 @@ The Ask Sage API is documented using Swagger, which provides detailed informatio
 </center>
 
 #### Server API: 
-- Documentation: https://app.swaggerhub.com/apis-docs/NICOLASCHAILLAN_1/server_ask-sage_api/1.0
+- Documentation: https://app.swaggerhub.com/apis-docs/AskSage/server_ask-sage_api/1.0
 - The Base URL for the Server API is: [ Base URL: api.asksage.ai/server/ ]
 
 This information is used to interact with the Ask Sage API. The user can query models, select/get personas, get datasets, train models and more. 
