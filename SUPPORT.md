@@ -1,31 +1,25 @@
-# Support and Help
+# Support
 
-Need help getting started or using a project? Here's how.
+Need help with Ask Sage or the examples in this repository? Here's how to get support.
 
-## How to get help
+## Resources
 
-Generally, we do not use GitHub as a support forum. For any usage questions that are not specific to the project itself, please ask on [Stack Overflow](https://stackoverflow.com) instead. By doing so, you are more likely to quickly solve your problem, and you will allow anyone else with the same question to find the answer. This also allows maintainers to focus on improving the project for others.
+- **Official Documentation**: [docs.asksage.ai](https://docs.asksage.ai/)
+- **Python Client (PyPI)**: [asksageclient](https://pypi.org/project/asksageclient/)
+- **Community Discord**: [Join the Ask Sage Discord](https://discord.gg/upxuAdNvjY)
 
-Please seek support in the following ways:
+## Getting Help
 
-1. **Read the documentation and other guides** for the project to see if you can figure it out on your own. These should be located in a root `docs/` directory. If there is an example project, explore that to learn how it works to see if you can answer your question.
+1. **Check the docs first** — Most questions about the API, endpoints, and authentication are covered in the [official documentation](https://docs.asksage.ai/).
 
-    **Search for answers and ask questions on [Stack Overflow](https://stackoverflow.com).** This is the most appropriate place for debugging issues specific to your use of the project, or figuring out how to use the project in a specific way.
+2. **Search existing issues** — Your question may already be answered in the [GitHub Issues](https://github.com/Ask-Sage/AskSage-Open-Source-Community/issues).
 
-2. As a **last resort**, you may open an issue on GitHub to ask for help. However, please clearly explain what you are trying to do, and list what you have already attempted to solve the problem. Provide code samples, but **do not** attach your entire project for someone else to debug. Review our [contributing guidelines](CONTRIBUTING.md).
+3. **Ask on Discord** — Join the [Ask Sage Discord](https://discord.gg/upxuAdNvjY) for community help and discussion.
 
-## What NOT to do 
+4. **Open an issue** — If you've found a bug or have a feature request specific to this repository, [open an issue](https://github.com/Ask-Sage/AskSage-Open-Source-Community/issues/new).
 
-Please **do not** do any the following:
+5. **Contact support** — For account, billing, or platform-specific questions, email **support@asksage.ai**.
 
-1. Do not reach out to the author or contributor on Twitter (or other social media) by tweeting or sending a direct message.
+## What This Repo Covers
 
-2. Do not email the author or contributor.
-
-3. Do not open duplicate issues or litter an existing issue with +1's.
-
-These are not appropriate avenues for seeking help or support with an open-source project. Please follow the guidelines in the previous section. Public questions get public answers, which benefits everyone in the community. ✌️
-
-## Customer Support
-
-We do not provide any sort of "customer support" for open-source projects. However, we may be available for hire. For details on contracting and consulting, email us at asksage.community@gmail.com
+This is a **community-driven** repository with examples and guides for using the Ask Sage API. For official API support, please refer to the resources above.
