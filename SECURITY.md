@@ -1,13 +1,23 @@
 # Security Policy
 
-If you discover a security issue, please bring it to our attention right away!
+If you discover a security vulnerability, please report it responsibly. **Do not** file a public issue.
 
 ## Reporting a Vulnerability
- 
-Please **DO NOT** file a public issue to report a security vulnerability, instead send your report privately to **asksage.community@gmail.com**. This will help ensure that any vulnerabilities that are found can be [disclosed responsibly](https://en.wikipedia.org/wiki/Responsible_disclosure) to any affected parties.
+
+Send your report privately to **security@asksage.ai**.
+
+We will acknowledge receipt within 48 hours and work with you to understand and address the issue promptly.
+
+Please include:
+
+- A description of the vulnerability
+- Steps to reproduce (if applicable)
+- Any potential impact
 
 ## Supported Versions
 
-Project versions that are currently being supported with security updates vary per project.
-Please see specific project repositories for details.
-If nothing is specified, only the latest major versions are supported.
+Only the latest version of the Ask Sage API and Python client are actively supported with security updates.
+
+## Responsible Disclosure
+
+We follow [responsible disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure) practices. We ask that you give us a reasonable amount of time to address reported vulnerabilities before making them public.
