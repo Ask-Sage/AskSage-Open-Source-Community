@@ -97,9 +97,11 @@ models = [
 
 > **Note:** Available models may vary by account and tenant configuration. Admins can restrict access to certain models.
 
-## OpenAI-Compatible Endpoint
+## API Compatibility Endpoints
 
-Ask Sage provides an OpenAI-compatible endpoint at `https://api.asksage.ai/openai/` that works with the OpenAI SDK and any tool that supports the OpenAI API format.
+Ask Sage provides native API compatibility with **OpenAI**, **Anthropic**, and **Google Gemini** — use the SDKs and tools you already know with zero code changes beyond swapping the base URL.
+
+### OpenAI-Compatible Endpoint
 
 ```python
 from openai import OpenAI
@@ -117,11 +119,48 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-This makes Ask Sage compatible with a wide range of tools and integrations that support the OpenAI API.
+### Anthropic-Compatible Endpoint
+
+```python
+import anthropic
+
+client = anthropic.Anthropic(
+    base_url="https://api.asksage.ai/server/anthropic",
+    api_key="your_asksage_api_key"
+)
+
+response = client.messages.create(
+    model="claude-sonnet-4",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+
+print(response.content[0].text)
+```
+
+### Gemini-Compatible Endpoint
+
+```python
+import requests
+
+model = "gemini-2.5-flash"
+url = f"https://api.asksage.ai/server/google/v1/models/{model}:generateContent"
+
+response = requests.post(url, headers={
+    "Authorization": "Bearer your_asksage_api_key",
+    "Content-Type": "application/json"
+}, json={
+    "contents": [{"parts": [{"text": "Hello!"}]}]
+})
+
+print(response.json())
+```
+
+For full endpoint documentation including streaming, function calling, and advanced parameters, see the [API Compatibility Guides](https://docs.asksage.ai/).
 
 ## Integrations
 
-The OpenAI-compatible endpoint enables Ask Sage to work with popular developer tools:
+Ask Sage's API compatibility endpoints enable seamless integration with popular developer tools:
 
 - **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Use Ask Sage models as your coding assistant
 - **[Codex CLI](https://github.com/openai/codex)** — OpenAI's CLI tool works with Ask Sage via the compatible endpoint
