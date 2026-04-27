@@ -67,7 +67,7 @@ Ask Sage provides access to models from multiple providers through a single API:
 |---|---|
 | **OpenAI (Azure)** | GPT-4o, GPT-4o-mini, GPT-4.1, GPT-4.1-mini, GPT-5.1, o1, o1-mini, o3-mini, o4-mini |
 | **OpenAI (Azure Gov)** | GPT-4o-gov, GPT-4.1-gov, GPT-5.1-gov, o1-gov, o3-mini-gov, o4-mini-gov |
-| **Anthropic** | Claude 3.5 Sonnet, Claude 3.5 Haiku, Claude Sonnet 4, Claude Opus 4 |
+| **Anthropic** | Claude 3.5 Sonnet, Claude 3.5 Haiku, Claude Sonnet 4, Claude Opus 4.6, Claude Opus 4.7 |
 | **Google** | Gemini 2.0 Flash, Gemini 2.5 Pro, Gemini 2.5 Flash |
 | **Meta** | LLAMA 4 Scout, LLAMA 4 Maverick |
 | **Mistral** | Mistral Large |
@@ -85,7 +85,7 @@ models = [
     'o1', 'o1-mini', 'o3-mini', 'o4-mini',
     'gpt-4o-gov', 'gpt-4.1-gov', 'gpt-5.1-gov',
     'o1-gov', 'o3-mini-gov', 'o4-mini-gov',
-    'claude-35-sonnet', 'claude-35-haiku', 'claude-sonnet-4', 'claude-opus-4',
+    'claude-35-sonnet', 'claude-35-haiku', 'claude-sonnet-4', 'claude-opus-4-6', 'claude-opus-4-7',
     'gemini-20-flash', 'gemini-25-pro', 'gemini-25-flash',
     'llama-4-scout', 'llama-4-maverick',
     'mistral-large', 'xai-grok', 'cohere',
@@ -163,12 +163,48 @@ For full endpoint documentation including streaming, function calling, and advan
 Ask Sage's API compatibility endpoints enable seamless integration with popular developer tools:
 
 - **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** — Use Ask Sage models as your coding assistant
+- **[Claude Cowork](https://claude.com/product/cowork)** — Claude's knowledge-work product (desktop + mobile); supports plugins for domain-specific workflows (see below)
 - **[Codex CLI](https://github.com/openai/codex)** — OpenAI's CLI tool works with Ask Sage via the compatible endpoint
 - **[Continue.dev](https://continue.dev/)** — Open-source AI code assistant for VS Code and JetBrains
 - **[Cursor](https://cursor.sh/)** — AI-powered code editor
 - **[GitHub Copilot](https://github.com/features/copilot)** — Configure with Ask Sage's endpoint
 
 See the [official documentation](https://docs.asksage.ai/) for detailed setup instructions for each integration.
+
+### Claude Cowork Plugins
+
+Claude Cowork supports a public plugin ecosystem for extending Claude with domain-specific skills, sub-agents, slash commands, and MCP connectors. Each plugin is a small bundle of markdown + JSON — no code, no infrastructure, no build steps. The same plugin format works in **Claude Cowork** and **Claude Code**.
+
+**Anthropic-managed marketplaces:**
+
+- **[anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)** — Anthropic-curated directory of high-quality plugins (internal + partner-submitted).
+- **[anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community)** — Community marketplace. Submit your own at [clau.de/plugin-directory-submission](https://clau.de/plugin-directory-submission).
+- **[anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins)** — Open-source plugins for knowledge workers (sales, legal, finance, productivity, customer-support, product-management, marketing, data, enterprise-search, bio-research, plugin-management).
+- **[anthropics/financial-services-plugins](https://github.com/anthropics/financial-services-plugins)** — Vertical marketplace for financial services.
+
+**Install paths:**
+
+```bash
+# Cowork: browse and install at
+# https://claude.com/plugins/
+
+# Claude Code: add a marketplace, then install a plugin
+claude plugin marketplace add anthropics/knowledge-work-plugins
+claude plugin install <plugin-name>@knowledge-work-plugins
+```
+
+**Plugin structure** (every plugin follows the same layout):
+
+```
+plugin-name/
+├── .claude-plugin/plugin.json   # Manifest (required)
+├── .mcp.json                    # MCP server connectors (optional)
+├── commands/                    # Slash commands you invoke explicitly
+├── agents/                      # Specialized sub-agents
+└── skills/                      # Domain knowledge Claude draws on automatically
+```
+
+For full details see the [official plugin documentation](https://code.claude.com/docs/en/plugins). Ask Sage models are available inside any Cowork or Claude Code session via the [API compatibility endpoints](#api-compatibility-endpoints) above — plugins and Ask Sage models compose naturally.
 
 ## API Overview
 
